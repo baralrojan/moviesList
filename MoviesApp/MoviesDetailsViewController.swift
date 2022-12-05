@@ -10,12 +10,18 @@ import UIKit
 class MoviesDetailsViewController: UIViewController {
 
     @IBOutlet weak var MovieNameTextField: UITextField!
-    var movieNames: String!
+    
+    var movies: Movies!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        MovieNameTextField.text = movieNames
+        MovieNameTextField.text = movies.movieName
 
         // Do any additional setup after loading the view.
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        movies.movieName = MovieNameTextField.text ?? ""
     }
     
 

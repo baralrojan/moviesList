@@ -19,6 +19,11 @@ class MoviesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -93,7 +98,7 @@ class MoviesTableViewController: UITableViewController {
         let index = tableView.indexPathForSelectedRow!.row
         let movies = movieList.allMovies[index]
         let dst = segue.destination as! MoviesDetailsViewController
-        dst.movieNames = movies.movieName
+        dst.movies = movies
     }
 
 
