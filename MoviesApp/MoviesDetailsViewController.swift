@@ -9,8 +9,11 @@ import UIKit
 
 class MoviesDetailsViewController: UIViewController {
 
+    @IBOutlet weak var MovieNameTextField: UITextField!
+    var movieNames: String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        MovieNameTextField.text = movieNames
 
         // Do any additional setup after loading the view.
     }

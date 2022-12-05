@@ -8,7 +8,7 @@
 import UIKit
 
 class MoviesTableViewController: UITableViewController {
-    var movieList = MoviesList()
+    var movieList = MoviesList();
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +83,7 @@ class MoviesTableViewController: UITableViewController {
     }
     */
 
-  /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -92,9 +92,9 @@ class MoviesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         let index = tableView.indexPathForSelectedRow!.row
         let movies = movieList.allMovies[index]
-        let dst = segue.destination as! MoviesTableViewController
-        dst.movieName = movies.movieName
+        let dst = segue.destination as! MoviesDetailsViewController
+        dst.movieNames = movies.movieName
     }
 
-*/
+
 }
