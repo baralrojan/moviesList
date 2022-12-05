@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		2210D9CE293D3D110032EE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210D9CD293D3D110032EE79 /* AppDelegate.swift */; };
 		2210D9D0293D3D110032EE79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210D9CF293D3D110032EE79 /* SceneDelegate.swift */; };
-		2210D9D2293D3D110032EE79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210D9D1293D3D110032EE79 /* ViewController.swift */; };
 		2210D9D5293D3D110032EE79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2210D9D3293D3D110032EE79 /* Main.storyboard */; };
 		2210D9D7293D3D120032EE79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2210D9D6293D3D120032EE79 /* Assets.xcassets */; };
 		2210D9DA293D3D120032EE79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2210D9D8293D3D120032EE79 /* LaunchScreen.storyboard */; };
 		2210D9E5293D3D120032EE79 /* MoviesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210D9E4293D3D120032EE79 /* MoviesAppTests.swift */; };
 		2210D9EF293D3D120032EE79 /* MoviesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210D9EE293D3D120032EE79 /* MoviesAppUITests.swift */; };
 		2210D9F1293D3D120032EE79 /* MoviesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210D9F0293D3D120032EE79 /* MoviesAppUITestsLaunchTests.swift */; };
+		2210D9FE293D3DFF0032EE79 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210D9FD293D3DFF0032EE79 /* MoviesTableViewController.swift */; };
+		2210DA00293D493C0032EE79 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210D9FF293D493C0032EE79 /* Movies.swift */; };
+		2210DA02293D494C0032EE79 /* MoviesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2210DA01293D494C0032EE79 /* MoviesList.swift */; };
+		22E4E2DD293D739F00D929D5 /* MoviesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4E2DC293D739F00D929D5 /* MoviesDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,6 @@
 		2210D9CA293D3D110032EE79 /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2210D9CD293D3D110032EE79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2210D9CF293D3D110032EE79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2210D9D1293D3D110032EE79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2210D9D4293D3D110032EE79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2210D9D6293D3D120032EE79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2210D9D9293D3D120032EE79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		2210D9EA293D3D120032EE79 /* MoviesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2210D9EE293D3D120032EE79 /* MoviesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppUITests.swift; sourceTree = "<group>"; };
 		2210D9F0293D3D120032EE79 /* MoviesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2210D9FD293D3DFF0032EE79 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
+		2210D9FF293D493C0032EE79 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		2210DA01293D494C0032EE79 /* MoviesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesList.swift; sourceTree = "<group>"; };
+		22E4E2DC293D739F00D929D5 /* MoviesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				2210D9CD293D3D110032EE79 /* AppDelegate.swift */,
+				22E4E2DC293D739F00D929D5 /* MoviesDetailsViewController.swift */,
+				2210D9FD293D3DFF0032EE79 /* MoviesTableViewController.swift */,
+				2210D9FF293D493C0032EE79 /* Movies.swift */,
+				2210DA01293D494C0032EE79 /* MoviesList.swift */,
 				2210D9CF293D3D110032EE79 /* SceneDelegate.swift */,
-				2210D9D1293D3D110032EE79 /* ViewController.swift */,
 				2210D9D3293D3D110032EE79 /* Main.storyboard */,
 				2210D9D6293D3D120032EE79 /* Assets.xcassets */,
 				2210D9D8293D3D120032EE79 /* LaunchScreen.storyboard */,
@@ -258,8 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2210D9D2293D3D110032EE79 /* ViewController.swift in Sources */,
+				2210D9FE293D3DFF0032EE79 /* MoviesTableViewController.swift in Sources */,
 				2210D9CE293D3D110032EE79 /* AppDelegate.swift in Sources */,
+				2210DA00293D493C0032EE79 /* Movies.swift in Sources */,
+				2210DA02293D494C0032EE79 /* MoviesList.swift in Sources */,
+				22E4E2DD293D739F00D929D5 /* MoviesDetailsViewController.swift in Sources */,
 				2210D9D0293D3D110032EE79 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
