@@ -50,7 +50,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="52r-Gl-IbU" kind="show" id="M9y-n9-V8L"/>
+                                    <segue destination="52r-Gl-IbU" kind="show" identifier="edit" id="M9y-n9-V8L"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -59,7 +59,14 @@
                             <outlet property="delegate" destination="XGX-gS-8S3" id="QGz-cM-6Ux"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Movies" id="1xZ-6e-RaH"/>
+                    <navigationItem key="navigationItem" title="Movies" id="1xZ-6e-RaH">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="qGf-zP-veW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IDl-QM-ZDV">
+                            <connections>
+                                <segue destination="52r-Gl-IbU" kind="show" identifier="add" id="dcv-BX-Kb9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O29-4p-qHw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,9 +122,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEa-WW-it2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1258" y="89"/>
+            <point key="canvasLocation" x="1358" y="78"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dcv-BX-Kb9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

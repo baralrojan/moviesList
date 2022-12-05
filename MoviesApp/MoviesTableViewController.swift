@@ -17,7 +17,7 @@ class MoviesTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,24 +61,26 @@ class MoviesTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            movieList.deleteMovies(index:indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
-    /*
+
+    
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        movieList.moveMovies(from: fromIndexPath.row, to: to.row)
 
     }
-    */
+
 
     /*
     // Override to support conditional rearranging of the table view.
@@ -95,10 +97,18 @@ class MoviesTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let index = tableView.indexPathForSelectedRow!.row
-        let movies = movieList.allMovies[index]
         let dst = segue.destination as! MoviesDetailsViewController
-        dst.movies = movies
+        if segue.identifier == "add"{
+            //let movies = movieList.createMovies()
+            dst.moviesList = movieList
+            
+        }else if(segue.identifier == "edit"){
+            let index = tableView.indexPathForSelectedRow!.row
+            let movies = movieList.allMovies[index]
+            dst.movies = movies
+        }else{
+            preconditionFailure("segue Identifier unknown")
+        }
     }
 
 
